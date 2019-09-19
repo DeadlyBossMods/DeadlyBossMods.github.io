@@ -13,8 +13,6 @@ exclude:
   - LICENSE
   - README.md
   - Rakefile
-heading_anchors: true
-footer_content: "Copyright &copy; 2019 DeadlyBossMods."
 markdown: rdiscount
 rdiscount:
   extensions:
