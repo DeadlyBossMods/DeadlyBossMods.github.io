@@ -13,10 +13,6 @@ exclude:
   - LICENSE
   - README.md
   - Rakefile
-markdown: rdiscount
-rdiscount:
-  extensions:
-    - generate_toc
 sass:
   style: compressed
 lunr_search:
