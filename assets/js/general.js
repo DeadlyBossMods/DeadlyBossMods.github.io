@@ -263,7 +263,7 @@
 
 	dbm.onReady(function() {
 		initNav();
-		//initSearch();
+		initSearch();
 		initThemeToggle();
 	});
 })();
