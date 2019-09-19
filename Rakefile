@@ -67,7 +67,7 @@ task :deploy do
 		puts `git add .`
 		puts `git commit -m "Deploy"`
 		puts "Pushing to GitHub..."
-		puts `git push --quiet > /dev/null 2>&1`
+		puts `git push`
 	end
 end
 
