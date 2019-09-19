@@ -25,23 +25,6 @@
 		}
 	}
 
-	function initNav() {
-		var mainNav = document.querySelector('.js-main-nav'),
-			pageHeader = document.querySelector('.js-page-header'),
-			navTrigger = document.querySelector('.js-main-nav-trigger');
-		dbm.addEvent(navTrigger, 'click', function(e) {
-			e.preventDefault();
-			var text = navTrigger.innerText,
-				textToggle = navTrigger.getAttribute('data-text-toggle');
-			mainNav.classList.toggle('nav-open');
-			pageHeader.classList.toggle('nav-open');
-			navTrigger.classList.toggle('nav-open');
-			navTrigger.innerText = textToggle;
-			navTrigger.setAttribute('data-text-toggle', text);
-			textToggle = text;
-		});
-	}
-
 	function initSearch() {
 		var request = new XMLHttpRequest();
 		request.open('GET', '/assets/js/index.json', true);
@@ -262,7 +245,6 @@
 	}
 
 	dbm.onReady(function() {
-		initNav();
 		initSearch();
 		initThemeToggle();
 	});

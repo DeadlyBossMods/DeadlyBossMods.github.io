@@ -9,27 +9,23 @@
 		</symbol>
 	</svg>
 	<div class="sidebar">
-		<!-- TODO: Do we have a logo? -->
-		<a href="{{ site.url }}{{ site.baseurl }}" class="site-title">{{ site.title }}</a>
-		<button class="menu-button fs-3 js-main-nav-trigger" data-text-toggle="Hide" type="button">Menu</button>
-		<nav class="js-main-nav">
-			{% include nav.html %}
-		</nav>
-	</div>
-	<section tabindex="0">
-		<div class="js-page-header">
-			<div style="display: none;">
-				<!-- TODO -->
-				<div class="js-toggle-dark-mode">
-			</div>
+		<div class="sidebar-scroll">
+			<div class="js-toggle-dark-mode" style="display: none">
 			<div class="search">
+				<!-- TODO: Do we have a logo? -->
+				<a href="{{ site.url }}{{ site.baseurl }}" class="site-title">{{ site.title }}</a>
 				<div class="search-input-wrap">
 					<input type="text" class="js-search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
-					<svg width="14" height="14" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title><g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"/><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"/></g></svg>
+					<svg width="14" height="14" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><title>Search</title><g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"/><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"/></g></svg>
 				</div>
 				<div class="js-search-results search-results-wrap"></div>
 			</div>
+			<nav class="js-main-nav">
+				{% include nav.html %}
+			</nav>
 		</div>
+	</div>
+	<section tabindex="0">
 		{% unless page.url == "/" %}{% if page.parent %}
 			<nav class="breadcrumb-nav">
 				<ol class="breadcrumb-nav-list">

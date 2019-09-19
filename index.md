@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Markdown kitchen sink
+toc: true
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
