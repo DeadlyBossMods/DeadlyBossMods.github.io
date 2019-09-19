@@ -86,6 +86,8 @@ namespace :deploy do
 			file.write("machine github.com login #{ENV["GH_TOKEN"]}")
 		}
 		puts `chmod 600 ~/.netrc`
+		# Now deploy
+		Rake::Task["deploy"].invoke
 	end
 end
 
