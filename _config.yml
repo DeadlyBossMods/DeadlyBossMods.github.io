@@ -18,6 +18,7 @@ lunr_search:
 plugins:
   - jekyll-lunr-js-search
   - jekyll-seo-tag
+  - jekyll-toc
 compress_html:
   clippings: all
   comments: all
