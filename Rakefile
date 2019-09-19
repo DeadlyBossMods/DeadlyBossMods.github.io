@@ -48,7 +48,7 @@ desc "Deploy the site to the gh_pages branch and push"
 task :deploy do
 	FileUtils.rm_rf "_gh-pages"
 	puts "Cloning master branch..."
-	puts `git clone https://github.com/DeadlyBossMods/DeadlyBossMods.github.io.git _gh-pages`
+	puts `git clone https://#{ENV["GITHUB_OAUTH"]}@github.com/DeadlyBossMods/DeadlyBossMods.github.io.git _gh-pages`
 	Dir.chdir("_gh-pages") do
 		puts "Pulling changes from server..."
 		puts `git checkout master`
