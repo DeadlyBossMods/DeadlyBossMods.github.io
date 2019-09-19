@@ -1,0 +1,42 @@
+language: ruby
+sudo: false
+cache: bundler
+
+rvm:
+  - 2.6.3
+
+branches:
+  except:
+    - master
+
+cache:
+  directories:
+    - $TRAVIS_BUILD_DIR/tmp/.htmlproofer
+
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+addons:
+  apt:
+    packages:
+      - libcurl4-openssl-dev
+
+install:
+  - gem install bundler
+  - bundle install --with=distribution
+  - git config --global user.email "deploys@deadlybossmods.com"
+  - git config --global user.name "GH Pages Deploy Bot"
+
+script:
+  - bundle exec rake build
+  - bundle exec rake test
+  - bundle exec danger
+
+after_success:
+  - bundle exec rake deploy:travis
+
+notifications:
+  email:
+    on_failure: always
+    on_success: never

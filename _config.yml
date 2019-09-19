@@ -1,0 +1,35 @@
+url: http://deadlybossmods.github.io
+title: DeadlyBossMods
+permalink: pretty
+baseurl: ""
+twitter_username: deadlybossmods
+github_username: DeadlyBossMods
+exclude:
+  - .editconfig
+  - .ruby-version
+  - CNAME
+  - Dangerfile
+  - Gemfile
+  - LICENSE
+  - README.md
+  - Rakefile
+heading_anchors: true
+footer_content: "Copyright &copy; 2019 DeadlyBossMods."
+markdown: rdiscount
+rdiscount:
+  extensions:
+    - generate_toc
+sass:
+  style: compressed
+lunr_search:
+  js_dir: "assets/js"
+plugins:
+  - jekyll-lunr-js-search
+  - jekyll-seo-tag
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
