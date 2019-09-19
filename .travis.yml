@@ -31,6 +31,10 @@ script:
   - bundle exec rake build
   - bundle exec rake test
   - bundle exec danger
+  - npm run test
+
+before_install:
+  - npm install -g npm@latest
 
 after_success:
   - bundle exec rake deploy:travis

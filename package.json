@@ -1,0 +1,33 @@
+{
+  "name": "DeadlyBossMods.github.io",
+  "version": "0.0.1",
+  "description": "DeadlyBossMods GitHub site",
+  "repository": {
+    "type": "git",
+	"url": "DeadlyBossMods/DeadlyBossMods.github.io"
+  },
+  "license": "MIT",
+  "bugs": "https://github.com/DeadlyBossMods/DeadlyBossMods.github.io/issues",
+  "authors": [
+    "Developaws"
+  ],
+  "devDependencies": {
+    "eslint": "~6.3.0",
+    "eslint-config-stylelint": "~11.1.0",
+    "stylelint": "~11.0.0",
+    "stylelint-config-primer": "~8.0.0"
+  },
+  "scripts": {
+    "lint:scss": "stylelint '**/*.scss'",
+    "lint:js": "eslint . --cache --max-warnings=0",
+    "test": "npm-run-all --parallel lint:*"
+  },
+  "eslintConfig": {
+    "extends": [
+      "stylelint"
+    ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-primer"
+  }
+}
