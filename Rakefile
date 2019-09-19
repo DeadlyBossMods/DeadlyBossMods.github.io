@@ -11,7 +11,6 @@ desc "Builds the site locally"
 task :build do
 	puts "Building site..."
 	sh "PRODUCTION=\"YES\" jekyll build --destination _gh-pages"
-	sh "PRODUCTION=\"YES\" jekyll build --destination _gh-pages"
 end
 
 desc "Runs some tests"
@@ -19,7 +18,7 @@ task :test do
 	puts "Running tests..."
 	require "html-proofer"
 	begin
-		HTMLProofer.check_directory('./_ghpages/', {
+		HTMLProofer.check_directory('./_gh-pages/', {
 			:check_html				=> true,
 			:check_external_hash	=> true,
 			:check_image_http		=> true,
@@ -79,7 +78,7 @@ namespace :deploy do
 		branch = ENV["TRAVIS_BRANCH"]
 		abort "Must be run on Travis." unless branch
 		abort "Skipping deploy for non-source branch #{branch}." if branch != "source"
-		abort "Skipping deploy from pull request." if ENV["TRAVIS_PULL_REQUEST"] != false
+		abort "Skipping deploy from pull request." if ENV["TRAVIS_PULL_REQUEST"] != "false"
 		# Setup for deployment, so you can push to https without entering creds all the time.
 		puts `git config --global user.email #{ENV["GIT_EMAIL"]}`
 		puts `git config --global user.name #{ENV["GIT_NAME"]}`
