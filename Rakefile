@@ -39,7 +39,7 @@ desc "Runs a local server and watches for changes"
 task :serve do
 	jekyll = Process.spawn("PRODUCTION=\"NO\" bundle exec jekyll serve --watch --port 4000")
 	trap("INT") {
-		Process.kill(9, jekyll) rescue Errno:ESRCH
+		Process.kill(9, jekyll) rescue Errno::ESRCH
 		exit 0
 	}
 	Process.wait(jekyll)
@@ -83,7 +83,7 @@ namespace :deploy do
 		# Setup for deployment, so you can push to https without entering creds all the time.
 		puts `git config --global user.email #{ENV["GIT_EMAIL"]}`
 		puts `git config --global user.name #{ENV["GIT_NAME"]}`
-		File.open("#{ENV[\"HOME\"}/.netrc", "w") { |file|
+		File.open("#{ENV["HOME"}/.netrc", "w") { |file|
 			file.write("machine github.com login #{ENV["GH_TOKEN"]}")
 		}
 		puts `chmod 600 ~/.netrc`
