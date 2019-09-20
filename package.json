@@ -31,7 +31,7 @@
   },
   "stylelint": {
     "extends": "stylelint-config-primer",
-    "ignoreFiles": "./_gh-pages/**.scss",
+    "ignoreFiles": "_gh-pages/**.scss",
     "rules": {
       "indentation": "tab",
       "selector-max-compound-selectors": null,

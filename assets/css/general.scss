@@ -1,17 +1,17 @@
 @charset "UTF-8";
 
 body {
-	font-weight: normal;
 	min-height: 100%;
-	color: #404040;
+	font-weight: normal;
 	overflow-x: hidden;
+	color: #404040;
 	background: #fcfcfc;
 }
 
 .sidebar {
 	position: fixed;
-	width: 300px;
 	top: 0;
+	width: 300px;
 	bottom: 0;
 	left: 0;
 	min-height: 100%;
@@ -27,22 +27,22 @@ body {
 			width: 300px;
 			padding: 0.8em;
 			text-align: center;
-			background-color: #ccc;
 			margin-bottom: 0.8em;
+			background-color: #ccc;
 			color: #2980b9;
 
 			.search-input-wrap {
 				.js-search-input {
 					width: 100%;
 					padding: 6px 12px;
-					border-radius: 50px;
 					border-color: #2472a4;
+					border-radius: 50px;
 					order: 2;
 				}
 
 				svg {
 					align-self: center;
-					margin-right: .5em;
+					margin-right: 0.5em;
 					order: 1;
 					color: #fff;
 				}
