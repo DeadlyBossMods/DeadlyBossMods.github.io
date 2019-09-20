@@ -2,8 +2,8 @@
 
 body {
 	min-height: 100%;
-	font-weight: normal;
 	overflow-x: hidden;
+	font-weight: normal;
 	color: #404040;
 	background: #fcfcfc;
 }
@@ -11,9 +11,9 @@ body {
 .sidebar {
 	position: fixed;
 	top: 0;
-	width: 300px;
 	bottom: 0;
 	left: 0;
+	width: 300px;
 	min-height: 100%;
 	overflow: hidden;
 
@@ -26,10 +26,10 @@ body {
 		.search {
 			width: 300px;
 			padding: 0.8em;
-			text-align: center;
 			margin-bottom: 0.8em;
-			background-color: #ccc;
+			text-align: center;
 			color: #2980b9;
+			background-color: #ccc;
 
 			.search-input-wrap {
 				.js-search-input {
