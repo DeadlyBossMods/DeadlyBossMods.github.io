@@ -29,10 +29,14 @@
       "es3"
     ]
   },
+  "eslintIgnore": [
+    "/_gh-pages/**",
+    "**/*.min.js"
+  ],
   "stylelint": {
     "extends": "stylelint-config-primer",
     "ignoreFiles": [
-      "_gh-pages/**.scss"
+      "/_gh-pages/**.scss"
     ],
     "rules": {
       "indentation": "tab",
